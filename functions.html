@@ -1,0 +1,59 @@
+<script>
+
+
+
+
+
+
+
+
+
+
+
+
+function col(num1,sign,num2){
+    switch (sign){
+        case "+": return num1 + num2;
+            break;
+        case "-": return num1 - num2; 
+            break;
+        case "*": return num1 * num2;
+            break;
+        case "/": return num1 / num2;
+            break;
+        case "%": return num1 * num2 / 100;            
+
+    }
+    
+}
+
+
+console.log(col(100,"%",10));
+
+
+
+
+
+
+function SideSize(wall,clock){
+    var a = wall - clock;
+    var b = a / 2;
+    return b;
+}
+
+console.log(SideSize(20,10));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
