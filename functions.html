@@ -4,32 +4,34 @@
 
 
 
-
-
-
+//task 1
 
 
 
 
 function col(num1,sign,num2){
     switch (sign){
-        case "+": return num1 + num2;
-            break;
-        case "-": return num1 - num2; 
-            break;
-        case "*": return num1 * num2;
-            break;
-        case "/": return num1 / num2;
-            break;
-        case "%": return num1 * num2 / 100;            
+        case "+": 
+            return num1 + num2;
+            
+        case "-": 
+            return num1 - num2; 
+            
+        case "*": 
+            return num1 * num2;
+            
+        case "/": 
+            return num1 / num2;
+            
+        case "%": 
+            return num1 * num2 / 100;            
 
     }
     
 }
 
 
-console.log(col(100,"%",10));
-
+console.log(col(100,"-",10));
 
 
 
@@ -46,10 +48,28 @@ console.log(SideSize(20,10));
 
 
 
+//task 2
 
 
 
 
+function a(par1,par2){
+    
+     console.log(typeof par1, typeof par2);
+         
+    if (typeof par1 === 'number' && typeof par2 === 'number'){
+        return  par1 + par2 
+}
+     
+    if (typeof par1 === 'string' && typeof par2 === 'string'){
+        return par1 + par2
+}
+  
+}
+    
+
+
+console.log(a("4"," 4"));
 
 
 
