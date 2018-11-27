@@ -1,7 +1,7 @@
 <script>
 
 
-
+/*
 
 
 //task 1
@@ -25,7 +25,11 @@ function col(num1,sign,num2){
             
         case "%": 
             return num1 * num2 / 100;            
+        
+        default:
 
+           "same types" 
+    
     }
     
 }
@@ -64,6 +68,10 @@ function a(par1,par2){
     if (typeof par1 === 'string' && typeof par2 === 'string'){
         return par1 + par2
 }
+    else {
+        " need same types"
+    }
+
   
 }
     
@@ -72,8 +80,27 @@ function a(par1,par2){
 console.log(a("4"," 4"));
 
 
+*/
 
 
+function prime(num){
+
+    if(num < 2){
+        return "not prime";
+    }
+    else if (num === 2){
+        return num;
+    }
+    for (i = 2; i < num; i++ ){
+        if(num % i === 0){
+            return "not prime"
+        }
+    }
+            return num;
+
+}
+
+console.log(prime(5));
 
 
 </script>
