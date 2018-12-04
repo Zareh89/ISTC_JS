@@ -1,0 +1,126 @@
+<script>
+
+
+
+
+
+//homeworks!!!!
+
+
+var obj ={
+    first: "Hello",
+    second: 27,
+    thrd: 24,
+    fourth: 85,
+    kvinta: 74
+
+};
+
+//task 1
+
+
+
+function checkParam(par){
+    if(obj.hasOwnProperty(par) === true){
+        return "your object has par"
+    }
+    else {
+        return "your object has no par"
+    }
+}
+
+
+
+console.log(checkParam());
+
+
+
+//task 2
+
+
+
+
+function del(){
+    
+    
+var obj1 = Object.keys(obj);
+
+   for (var key in obj){
+       if(key === obj1[2]){
+           delete obj[key]
+           
+       }
+
+   }
+      
+}
+
+
+del();
+
+console.log(obj);
+
+
+
+
+//task 3
+
+
+
+
+
+var object = {
+    a: 1,
+    b: 2,
+    c: 3
+};
+
+function objlenght (){
+    return Object.keys(object).length
+}
+
+
+console.log(objlenght());
+
+
+
+
+//task 4
+
+
+var obje = {
+    first: 10,
+    second: 20,
+    third : 30,
+    equal: function (){
+        return this.first + this.second + this.third
+    }  
+};
+
+obje.last = function(){
+    return this.equal()/ 2
+}
+
+
+for (key in obje){
+    console.log(key)
+    console.log(obje[key])
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
