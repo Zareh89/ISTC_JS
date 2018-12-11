@@ -1,0 +1,109 @@
+<script>
+
+
+//task 1
+
+function stringConcat(string,num = 1){
+   if(typeof string === "string" && 
+      typeof num === "number" &&
+      num > 0 ){
+    var str = "";
+    for( i = 0; i < num; i++ ){
+        str += string
+    }
+  return str
+}
+  else { return "put corect arguments"
+
+}
+
+}
+
+
+console.log(stringConcat("alo ",3))
+
+
+
+//task 2
+
+
+var array =[2,4,["string", 6,8], "hello",7,[4, 9, "name"], -2, 14,-6];
+var array2 =[];
+
+for ( i = 0; i < array.length; i++){
+    if (Array.isArray(array[i]) === true){
+        array2.push(array[i])
+    }
+}
+
+
+
+console.log(array2);
+
+
+
+
+
+
+//task 3
+
+
+
+function Palindrome(string){
+      var first ="";
+      var second ="";
+    
+    
+    for (i = 0; i < string.length; i++){
+        var a = string.charAt(i)
+           first +=  a
+    }
+    for ( j = string.length; j >= 0; j--){
+        var b = string.charAt(j)
+           second += b
+    }
+    if (typeof string !== "string"){
+        return "put string"
+    }
+    else if ( first === second){
+        return " your string is Palindrome "
+    }
+    else {return "your string is not Palindrome"}
+    
+}
+
+
+
+console.log(Palindrome(4));
+
+
+//example 2
+
+function a(str){
+    var x = str;
+    var a = str.split("").reverse();
+    var y = a.join("");
+    if ( x === y ){
+        return "your string is Palindrome"
+    }
+    else {return "your string is not Palindrome"
+    }
+
+
+}
+
+
+console.log(a("asdasfa"))
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
