@@ -1,0 +1,34 @@
+<script>
+
+
+
+function checkString(string) {
+    for (var i = 0; i < string.length; i++) {
+        var count = 0;
+
+        for (var j = 0; j < string.length; j++) {
+            if (string[i] === string[j]) {
+                count++;
+            }
+
+        }
+        if (count === 1) {
+            return string[i]
+        }
+
+    }
+}
+
+console.log(checkString("aaaaasssstrrrs"));
+
+
+
+
+
+
+
+
+
+
+
+</script>
