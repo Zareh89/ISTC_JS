@@ -49,8 +49,9 @@ body{
     height: 100%;
 }
 th{
-    padding-left: 15px;
-    color: rgb(0, 0, 0)
+    padding-left: 1.5vw;
+    color: rgb(0, 0, 0);
+    font-size: 1.5wv;
 }
 table{
    margin: 0 auto;
@@ -62,8 +63,10 @@ table{
     width: 100%;
     height: 90%;
     background-image: url(https://thesweetsetup.com/wp-content/uploads/2018/03/Windows-on-Mac-Hero-2.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    
 }
 .second_container>div:first-child{
     color: white;
@@ -76,7 +79,7 @@ table{
     
 }
 tr>th:first-child{
-    color: rgb(65, 109, 255)
+    color: #00b4d9;
 }
 button{
         background-color: #00b4d9;
@@ -93,11 +96,11 @@ h1{
 }
 .links{
     box-sizing: border-box;
-    margin-left: 45%;
+    text-align: center
 }
 .button{
     box-sizing: border-box;
-    margin-left: 42.3%;
+    text-align: center;
     margin-top: 2%
 
 }
