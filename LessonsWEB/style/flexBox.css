@@ -33,7 +33,9 @@ header{
 .fourth_cont{
     width: 100%;
     height: 10%;
-    background-color: black
+    background-color: black;
+    display: flex;
+    justify-content: flex-end
 }
 .first_ul>li{
     float: left;
@@ -60,7 +62,7 @@ header>div:first-child{
 }
 img{
     height: 50%;
-    width: 50%;
+    width: 40%;
     margin: auto auto auto 0
     
     
@@ -162,12 +164,14 @@ h5{
 .input1>:first-child{
     margin: auto 0;
     border: none;
-    padding: 1% 
+    padding: 1%;
+    width: 30%; 
 }
 .input1>:last-child{
     margin: auto 0;
     border: none;
-    padding: 1% 2%;
+    padding: 1%;
+    width: 15%;
     background-color: #FA5C50;
     color: white
 }
@@ -178,6 +182,39 @@ h5{
     border: solid gray 2px;
     
     
+    
 }
-
+.fourth_cont>div:first-child{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    
+}
+.h3>h3{
+    margin: auto
+}
+.fourth_cont>div:last-child{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1%
+    
+}
+.input2>:first-child{
+    margin: auto 0;
+    border: none;
+    padding: 1.5%;
+    width: 55%; 
+}
+.input2>:last-child{
+    margin: auto 0;
+    border: none;
+    padding: 1.5%;
+    width: 25%;
+    background-color: #FA5C50;
+    color: white
+}
 
