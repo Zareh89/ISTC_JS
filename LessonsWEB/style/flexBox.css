@@ -22,13 +22,15 @@ header{
 .second_cont{
     width: 100%;
     height: 8%;
-    background-color: antiquewhite;
+    background-color: rgb(226, 226, 226);
     display: flex;
     justify-content: space-evenly
 }
 .third_cont{
     width: 100%;
-    height: 30%;
+    height: 45%;
+    display: flex;
+    justify-content: space-evenly
 }
 .fourth_cont{
     width: 100%;
@@ -222,4 +224,49 @@ h5{
     background-color: #FA5C50;
     color: white
 }
+.third_cont>div{
+    height: 100%;
+    width: 25%;
+    
+    text-align: center
+}
+.item1>div:first-child{
+    width: 25%;
+    height: 30%;
+    background-image: url("../img/Mikro.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 60px;
+    border: solid black 2px;
+    display: inline-block;
+    margin-top: 20%
+
+}
+hr{
+    border-color: red;
+    width: 20%;
+}
+.item2>div:first-child{
+    width: 25%;
+    height: 30%;
+    background-image: url("../img/Klu4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 60px;
+    border: solid black 2px;
+    display: inline-block;
+    margin-top: 20%
+}
+.item3>div:first-child{
+    width: 25%;
+    height: 30%;
+    background-image: url("../img/hat.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 60px;
+    border: solid black 2px;
+    display: inline-block;
+    margin-top: 20%
+}
+
 
