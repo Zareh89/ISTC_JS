@@ -8,7 +8,7 @@
 </head>
 <body>
    <div id="demo">
-   <h2>The XMLHttpRequest Object</h2>
+   <h2 id="h2">The XMLHttpRequest Object</h2>
    <button type="button" onclick="loadDoc()">Change Content</button>
     <ul id="ul">
 
@@ -28,8 +28,11 @@
             var li = document.createElement("lI");
             ul.appendChild(li).innerHTML = obj[i];
           }
-       }
-       };
+           document.getElementById("demo").innerHTML = ul.innerHTML;
+        }
+       
+       
+    };
        xhttp.open("GET", "http://jsonplaceholder.typicode.com/todos/1", true);
        xhttp.send();
    }
