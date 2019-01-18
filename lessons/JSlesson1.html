@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+</head>
+<body>
+   <div id="demo">
+   <h2>The XMLHttpRequest Object</h2>
+   <button type="button" onclick="loadDoc()">Change Content</button>
+    <ul id="ul">
+
+    </ul>
+   </div>
+
+   <script>
+   function loadDoc() {
+       var arr = [];
+       var xhttp = new XMLHttpRequest();
+       xhttp.onreadystatechange = function() {
+       if (this.readyState == 4 && this.status == 200) {
+           var obj = JSON.parse(this.responseText);
+           
+            var ul = document.getElementById("ul");
+           for (i in obj){
+            var li = document.createElement("lI");
+            ul.appendChild(li).innerHTML = obj[i];
+          }
+       }
+       };
+       xhttp.open("GET", "http://jsonplaceholder.typicode.com/todos/1", true);
+       xhttp.send();
+   }
+   </script>
+
+</body>
+</html>
