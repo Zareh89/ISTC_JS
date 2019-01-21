@@ -10,7 +10,7 @@ hr{
     
 }
 
-.alo{
+.input{
     background-position: 1% 1%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -63,22 +63,30 @@ button{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     margin-left: 48%
-    
-    
-    
-    
-    
-    
 }
-
-
-
-
 a{
     color:#90992A
 }
 label{
     color: white
 }
+ul{
+    display: none;   
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    list-style-type: none;
+    width: 40%;
+    height: fit-content;
+     
+ }
+ li{
+     margin: 40px;
+     
+ }
 
 

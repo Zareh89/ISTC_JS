@@ -9,28 +9,82 @@
 </head>
 <body>
     <form action="/">
-    <fieldset>
+        <fieldset id="set">
     
             <h1>Create an Account</h1>
         <hr>
         
-        <input class="alo" type="name" placeholder="Name">
-        <input class="alo" type="number" placeholder="Phone Number">
-        <input class="alo" type="email" placeholder="Email">
-        <input class="alo" type="password" placeholder="Password">
+        <input class="input" id="Name" type="name" placeholder="Name">
+        <input class="input" id="Number" type="number" placeholder="Phone Number">
+        <input class="input" id="Email" type="email" placeholder="Email">
+        <input class="input" id="Pass" type="password" placeholder="Password">
     <div>
-        <input type="checkbox">
+        <input id="label" type="checkbox" required>
         <label for="checkbox">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
     </div> 
-    <button type="submit">Create Account</button> 
+    <button type="button" class="button" onclick="MyFunction()">Create Account</button> 
 
       
-        
-        
-           
-        
-        
-    </fieldset>
+        </fieldset>
+        <ul id="ul">
+            <li><b>My Account</b></li>
+            
+        </ul>
+
+
     </form>
+    <script>
+     
+    function MyFunction(){
+           var name = document.getElementById("Name").value;
+           var number = document.getElementById("Number").value;
+           var email = document.getElementById("Email").value;
+           var pass = document.getElementById("Pass").value;
+           
+           if(name && number && email && pass){
+               var obj ={
+                   name: name,
+                   number: number,
+                   email: email,
+                   password: pass
+               }
+            fetch("http://rest.learncode.academy/api/learncode/friends",{
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(obj),
+            })
+            .then (myJson => myJson.json())
+            .then((myJson) => {
+                var ul = document.getElementById("ul");
+               
+                    for(i in myJson){
+                        document.getElementById("set").style.display ="none";
+                        var li = document.createElement("lI");
+                        ul.appendChild(li).innerHTML = myJson[i];
+                        document.getElementById("ul").style.display ="block";
+                    };
+                      
+            })
+           
+           };
+    
+           
+    };
+
+    
+    
+    
+    
+    
+    
+    </script>
+
+
+
+
+
+
+
+    
 </body>
 </html>
