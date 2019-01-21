@@ -17,10 +17,14 @@
         <input class="input" id="Name" type="name" placeholder="Name">
         <input class="input" id="Number" type="number" placeholder="Phone Number">
         <input class="input" id="Email" type="email" placeholder="Email">
+        <h5 id="h5"></h5>
         <input class="input" id="Pass" type="password" placeholder="Password">
+        <input class="input" id="Pass2" type="password" placeholder="Repeat Password">
+        <h5 id="h255"></h5>
     <div>
         <input id="label" type="checkbox" required>
         <label for="checkbox">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+        <h5 id="h25"></h5>
     </div> 
     <button type="button" class="button" onclick="MyFunction()">Create Account</button> 
 
@@ -36,12 +40,27 @@
     <script>
      
     function MyFunction(){
+           var pass2 = document.getElementById("Pass2").value;
            var name = document.getElementById("Name").value;
            var number = document.getElementById("Number").value;
            var email = document.getElementById("Email").value;
            var pass = document.getElementById("Pass").value;
-           
-           if(name && number && email && pass){
+           var re = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/;
+            if(re.test(email) === false){
+                document.getElementById("Email").style.borderColor = "red";
+                document.getElementById("h5").innerText = "invalid email adress"
+                return document.getElementById("h5").style.display="block";
+            };
+            if (document.getElementById("label").checked === false){
+                document.getElementById("h25").innerText = "put ptichka";
+                return document.getElementById("h25").style.display="block";
+            }
+            if(pass !== pass2){
+                document.getElementById("h255").innerText = "password doesn't much";
+                document.getElementById("Pass2").style.borderColor = "red";
+                return document.getElementById("h255").style.display="block";
+            }
+            if(name && number && email && pass){
                var obj ={
                    name: name,
                    number: number,
@@ -64,8 +83,8 @@
                         document.getElementById("ul").style.display ="block";
                     };
                       
-            })
-           
+                })
+            
            };
     
            
