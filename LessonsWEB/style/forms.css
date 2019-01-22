@@ -41,7 +41,7 @@ fieldset{
     padding: 0;
     background-color: #2c2d303b;
     border-radius: 5px;
-    border-color: #0000cc3b
+    border: none
 }
 form{
     text-align: center
@@ -94,6 +94,7 @@ ul{
  }
  li{
      margin: 40px;
+     color: rgb(0, 17, 172)
      
  }
  h5{

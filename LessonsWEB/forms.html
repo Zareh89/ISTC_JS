@@ -54,18 +54,19 @@
             if (document.getElementById("label").checked === false){
                 document.getElementById("h25").innerText = "put ptichka";
                 return document.getElementById("h25").style.display="block";
-            }
+            };
             if(pass !== pass2){
                 document.getElementById("h255").innerText = "password doesn't much";
                 document.getElementById("Pass2").style.borderColor = "red";
                 return document.getElementById("h255").style.display="block";
-            }
+            };
             if(name && number && email && pass){
                var obj ={
                    name: name,
                    number: number,
                    email: email,
-                   password: pass
+                   password: pass,
+                   password2: pass2
                }
             fetch("http://rest.learncode.academy/api/learncode/friends",{
             method: "POST",
@@ -73,7 +74,7 @@
             body: JSON.stringify(obj),
             })
             .then (myJson => myJson.json())
-            .then((myJson) => {
+            .then ((myJson) => {
                 var ul = document.getElementById("ul");
                
                     for(i in myJson){
@@ -86,7 +87,7 @@
                 })
             
            };
-    
+            
            
     };
 
