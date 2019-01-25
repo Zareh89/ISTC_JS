@@ -23,16 +23,17 @@ hr{
     text-align: center;
     width: 80%;
     font-size: 100%;
-    padding: 1%
+    padding: 1.5%;
+    border: 0.1px solid gray
 
 }
 h1{
-    color: rgb(0, 17, 172)
+    color: rgb(0, 103, 172)
 }
 
 
 fieldset{
-    width: 30%;
+    width: 25%;
     height: fit-content;
     position: relative;
     top: 50%;
@@ -60,7 +61,7 @@ input[type="password"]{
     background-image: url("../img/lock.svg")
 }
 */
-button{
+.button{
     padding: 2%;
     width: 45%;
     margin: 5% 0;
@@ -101,6 +102,34 @@ ul{
      margin: 0;
      color: red;
      display: none
+ }
+ .signin, .signup{
+    padding: 20px;
+    border: none;
+    margin: 0;
+    background-color: #2c2d3000;
+    width: 45%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color:rgb(0, 95, 172)
+ }
+ .signin{
+    color: white;
+    border-bottom: 2px solid rgb(0, 41, 128);
+ }
+ #signindiplay{
+     display: none
+ }
+ .button2{
+     width: 83%;
+     padding: 2%;
+     border-radius: 5px;
+    background: linear-gradient(to right, #0000cc 0%, #0099ff 100%);
+    color: white;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    margin: 5% 0;
  }
 
 

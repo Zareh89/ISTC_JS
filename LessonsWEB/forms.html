@@ -11,22 +11,32 @@
     <form action="/">
         <fieldset id="set">
     
-            <h1>Create an Account</h1>
-        <hr>
-        
-        <input class="input" id="Name" type="name" placeholder="Name">
-        <input class="input" id="Number" type="number" placeholder="Phone Number">
-        <input class="input" id="Email" type="email" placeholder="Email">
-        <h5 id="h5"></h5>
-        <input class="input" id="Pass" type="password" placeholder="Password">
-        <input class="input" id="Pass2" type="password" placeholder="Repeat Password">
-        <h5 id="h255"></h5>
-    <div>
+            <div class="topbuttons">
+                <button id="signi" class="signin" type="button" onclick="signin()">Sign Up</button>
+                <button id="signu" class="signup" type="button" onclick="signup()">Sign In</button>
+            </div>
+        <div id="signindiplay">
+            <input class="input" id="Name" type="name" placeholder="Name">
+            <input class="input" id="Pass" type="password" placeholder="Password">
+        <div>
+            <button id="butt" type="button" class="button2" onclick="MyFunction()">Login</button>
+        </div>
+        </div>
+        <div id="inputs">
+            <input class="input" id="Name" type="name" placeholder="Name">
+            <input class="input" id="Number" type="number" placeholder="Phone Number">
+            <input class="input" id="Email" type="email" placeholder="Email">
+            <h5 id="h5"></h5>
+            <input class="input" id="Pass" type="password" placeholder="Password">
+            <input class="input" id="Pass2" type="password" placeholder="Repeat Password">
+            <h5 id="h255"></h5>
+        </div>
+    <div id="label">
         <input id="label" type="checkbox" required>
         <label for="checkbox">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
         <h5 id="h25"></h5>
     </div> 
-    <button type="button" class="button" onclick="MyFunction()">Create Account</button> 
+    <button id="but" type="button" class="button" onclick="MyFunction()">Create Account</button> 
 
       
         </fieldset>
@@ -39,6 +49,32 @@
     </form>
     <script>
      
+    
+     function signup() {
+          document.getElementById("inputs").style.display = "none";
+          document.getElementById("label").style.display = "none";
+          document.getElementById("but").style.display = "none";
+          document.getElementById("signindiplay").style.display = "block";
+          document.getElementById("signu").style.color = "white";
+          document.getElementById("signi").style.color = "rgb(0, 41, 128)";
+          document.getElementById("signi").style.border = "none";
+          document.getElementById("signu").style.borderBottom = "2px solid rgb(0, 41, 128)"
+          
+          
+    };
+
+    function signin(){
+          document.getElementById("inputs").style.display = "block";
+          document.getElementById("label").style.display = "block";
+          document.getElementById("but").style.display = "block";
+          document.getElementById("signindiplay").style.display = "none";
+          document.getElementById("signu").style.color = "rgb(0, 41, 128)";
+          document.getElementById("signi").style.color = "white";
+          document.getElementById("signi").style.borderBottom = "2px solid rgb(0, 41, 128)";
+          document.getElementById("signu").style.border = "none"
+    }
+    
+    
     function MyFunction(){
            var pass2 = document.getElementById("Pass2").value;
            var name = document.getElementById("Name").value;
@@ -91,7 +127,6 @@
            
     };
 
-    
     
     
     
