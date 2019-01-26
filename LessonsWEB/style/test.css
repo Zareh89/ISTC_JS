@@ -1,0 +1,69 @@
+html, body{
+    width: 70%;
+    height: 100%;
+    margin: 0 auto
+    
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+.firstcont{
+    width: 100%;
+    height: 30%;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column
+    
+}
+button{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    outline: none
+}
+.firsticon{
+    background-image: url("https://slack-imgs.com/?c=1&url=https%3A%2F%2Fimage.flaticon.com%2Ficons%2Fpng%2F512%2F69%2F69407.png");
+    background-size: cover;
+    background-repeat: no-repeat
+}
+.secondicon{
+    background-image: url("https://slack-imgs.com/?c=1&url=http%3A%2F%2Fwww.transitionsta.org%2Fwp-content%2Fuploads%2F2016%2F12%2Ftwitter-black-round-icon.png");
+    background-size: cover;
+    background-repeat: no-repeat
+}
+.thirdicon{
+    background-image: url("https://slack-imgs.com/?c=1&url=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fdownload_460043.png");
+    background-size: cover;
+    background-repeat: no-repeat
+}
+.fourthicon{
+    background-image: url("https://slack-imgs.com/?c=1&url=http%3A%2F%2Fwww.transparentpng.com%2Fthumb%2Flogo-instagram%2FmrG45j-instagram-black-logo-free-download.png");
+    background-size: cover;
+    background-repeat: no-repeat
+}
+.icons{
+    margin: 10px auto;
+}
+.menu{
+    height: 20%;
+    width: 70%;
+    background-color: white;
+    margin: 10px auto
+}
+.firstmenu, .secondmenu{
+    width: 50%;
+    height: 100%;
+}
+.firstmenu{
+    background-image: url("logo.png");
+    background-size: contain;
+    background-repeat: no-repeat
+}
