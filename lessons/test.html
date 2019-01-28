@@ -7,20 +7,122 @@
     <title>Document</title>
     <link rel="stylesheet" href="../LessonsWEB/style/test.css">
 </head>
-<body>
+<body onload="myFunction()">
     <div class="wrapper">
         <div class="firstcont">
-            <div class="icons">
-                <button class="firsticon"></button>
-                <button class="secondicon"></button>
-                <button class="thirdicon"></button>
-                <button class="fourthicon"></button>
-            </div>
-            <div class="menu">
-               <div class="firstmenu"></div>
-               <div class="secondmenu"></div>
+            <div class="overlay">
+                <div class="icons">
+                    <button class="firsticon"></button>
+                    <button class="secondicon"></button>
+                    <button class="thirdicon"></button>
+                    <button class="fourthicon"></button>
+                </div>
+                    <button type="button" id="media" onclick="media()"></button>
+                    <div id="mediamenu">
+                            <p>HOME</p>
+                            <p>SERVICES</p>
+                            <p>PORTFOLIO</p>
+                            <p>TEAM</h6>
+                            <p>CONTACT</p>
+                    </div>
+                <div class="menu">
+                <div class="firstmenu">
+                    <h3>FLEX</h3>
+                </div>
+                <div class="secondmenu">
+                    <h6>HOME</h6>
+                    <h6>SERVICES</h6>
+                    <h6>PORTFOLIO</h6>
+                    <h6>TEAM</h6>
+                    <h6>CONTACT</h6>
+                </div>
+                </div>
+                <div class="secondcont">
+                    <h2 class="h2">DIGITAL STUDIO</h2>
+                    <hr class="hr">
+                    
+                    <h5 class="h5">LET US DESING YOUR WEBSITE</h5>
+                    <button class="resp">RESPONSIVE TEMPLATE</button>
+                </div>
             </div>
         </div>
+             <div class="secondpart">
+                 <div>
+                     <h2 class="h2_1">OUR SERVICES</h2>
+                     <hr class="hr_1">
+                     <h5 class="h5_1">LET US HALP YOU TO CREATE PROFESSIONAL WEBSITE</h5>
+                 </div>     
+                <div id="thirdcont">
+
+                </div>
+                <div class="thirdpart">
+                        <h2 class="h2_2">OUR PORTFOLIO</h2>
+                        <hr class="hr_2">
+                        <h5 class="h5_2">WHAT WE HAVE DONE SO FAR</h5>
+                    </div>
+                    <div id="four">
+
+                    </div>
+                    <div id="five">
+
+                    </div>
+            </div>   
     </div>
+    <script>
+        function myFunction(){
+    
+        let thirdcont = document.getElementById("thirdcont");
+        
+            for(let i = 0; i < 4; i++){
+                let div = document.createElement("div");
+                thirdcont.appendChild(div);
+                    div.id ="item"+i;
+                    div.style.backgroundColor = "#1BBC9B";
+                    if(i === 1){
+                        div.style.backgroundColor = "#E67F22"
+                    }
+                    if(i === 2){
+                        div.style.backgroundColor = "#3598DB"
+                    }
+                    if(i === 3){
+                        div.style.backgroundColor = "#2DCC72"
+                    }
+                    
+                
+            };
+            let four = document.getElementById("four");
+        
+            for(let j = 0; j < 4; j++){
+                let div1 = document.createElement("div");
+                four.appendChild(div1);
+                    div1.id ="item1"+j;
+                  
+                    
+            }
+            let five = document.getElementById("five");
+        
+        for(let k = 0; k < 4; k++){
+            let div2 = document.createElement("div");
+            five.appendChild(div2);
+                div2.id ="item2"+k;
+            }
+        };
+    
+    
+    
+    
+    function media(){
+         document.getElementById("mediamenu").style.display="block"
+         
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
 </body>
 </html>
