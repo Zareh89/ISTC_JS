@@ -94,7 +94,13 @@ h3{
 h6{
     margin:  auto;
     font-size: 70%;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer
+    
+}
+h6:hover{
+    color: rgb(236, 77, 48);
+    
 }
 
 .h2{
@@ -169,6 +175,9 @@ h6{
     height: 140px;
     
 
+}
+#thirdcont>div:hover,.resp,#media{
+    cursor: pointer;
 }
 #item1{
     background-image: url("paper-plane\ .svg");
@@ -315,19 +324,21 @@ p:hover{
 }
 @media only screen and (max-width: 1000px){
     #five{
-        width: 70%;
+        width: 100%;
         height: fit-content;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: stretch;
         margin: auto;
         margin-top: 2%;
         padding-right: 5px;
 }
 #four{
-    width: 70%;
+    width: 100%;
     height: fit-content;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
     margin: auto;
     margin-top: 2%;
     padding-right: 5px;
@@ -348,6 +359,14 @@ p:hover{
     height: 60px;
     margin-top: 6%
 
+}
+#four>div{
+    width: 90px;
+    height: 90px;
+}
+#five>div{
+    width: 90px;
+    height: 90px;
 }
 @media only screen and (width: 600px){
     #mediamenu{
