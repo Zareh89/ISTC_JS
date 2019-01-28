@@ -310,6 +310,9 @@ h6:hover{
     display: none;
     text-align: center
 }
+p{
+    color: white
+}
 p:hover{
     background-color: rgba(0, 0, 0, 0.726);
     color: white
@@ -361,12 +364,12 @@ p:hover{
 
 }
 #four>div{
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
 }
 #five>div{
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
 }
 @media only screen and (width: 600px){
     #mediamenu{
