@@ -24,7 +24,8 @@ hr{
     width: 80%;
     font-size: 100%;
     padding: 1.5%;
-    border: 0.1px solid gray
+    border: 0.1px solid gray;
+    color: rgb(0, 41, 128);
 
 }
 h1{
@@ -71,7 +72,8 @@ input[type="password"]{
     border: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
-    margin-left: 48%
+    margin-left: 48%;
+    outline: none
 }
 a{
     color:rgb(0, 17, 172)
@@ -111,7 +113,8 @@ ul{
     width: 45%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
-    color:rgb(0, 95, 172)
+    color:rgb(0, 95, 172);
+    outline: none
  }
  .signin{
     color: white;

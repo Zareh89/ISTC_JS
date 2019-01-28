@@ -16,10 +16,10 @@
                 <button id="signu" class="signup" type="button" onclick="signup()">Sign In</button>
             </div>
         <div id="signindiplay">
-            <input class="input" id="Name" type="name" placeholder="Name">
-            <input class="input" id="Pass" type="password" placeholder="Password">
+            <input class="input" id="Name2" type="name" placeholder="Name">
+            <input class="input" id="Pass3" type="password" placeholder="Password">
         <div>
-            <button id="butt" type="button" class="button2" onclick="MyFunction()">Login</button>
+            <button id="butt" type="submit" class="button2">Login</button>
         </div>
         </div>
         <div id="inputs">
@@ -96,7 +96,7 @@
                 document.getElementById("Pass2").style.borderColor = "red";
                 return document.getElementById("h255").style.display="block";
             };
-            if(name && number && email && pass){
+            if(name && number){
                var obj ={
                    name: name,
                    number: number,
