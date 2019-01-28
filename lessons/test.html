@@ -101,19 +101,24 @@
             }
             let five = document.getElementById("five");
         
-        for(let k = 0; k < 4; k++){
-            let div2 = document.createElement("div");
-            five.appendChild(div2);
-                div2.id ="item2"+k;
-            }
-        };
+            for(let k = 0; k < 4; k++){
+                let div2 = document.createElement("div");
+                five.appendChild(div2);
+                    div2.id ="item2"+k;
+                }
+            };
     
     
     
     
     function media(){
-         document.getElementById("mediamenu").style.display="block"
-         
+         let mediamenu = document.getElementById("mediamenu")
+         if(mediamenu.style.display == "none"){
+            mediamenu.style.display = "block"
+         }
+         else{
+            mediamenu.style.display ="none"
+         }
     }
     
     
