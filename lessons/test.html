@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../LessonsWEB/style/test.css">
 </head>
-<body onload="myFunction()">
+<body id="body" onload="myFunction()" onresize="hide()">
     <div class="wrapper">
         <div class="firstcont">
             <div class="overlay">
@@ -111,17 +111,23 @@
     
             let mediamenu = document.getElementById("mediamenu");
             mediamenu.style.display = "none";
-    function media(){
+    
+        function media(){
          
-         if(mediamenu.style.display == "none"){
-            mediamenu.style.display = "block"
-         }
-         else{
-            mediamenu.style.display ="none"
-         }
-    }
+            if(mediamenu.style.display == "none"){
+                mediamenu.style.display = "block"
+            }
+            else{
+                mediamenu.style.display ="none"
+            };
+    };
     
+    function hide(){
+        if(document.getElementById("body").clientWidth > 580){
+            document.getElementById("mediamenu").style.display ="none";
+        };
     
+    };
     
     
     
