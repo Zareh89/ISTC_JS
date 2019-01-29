@@ -2,6 +2,8 @@ html, body{
     width: 70%;
     height: 100%;
     margin: 0 auto;
+    min-width: 400px;
+    
    
     
 }
@@ -27,6 +29,7 @@ html, body{
     background-image: url("../img/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    
     
     
 }
@@ -241,23 +244,23 @@ h6:hover{
 #item10{
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("https://files.slack.com/files-pri/TC0UF4B08-FFP9E4AEM/p2.jpg")
+    background-image: url("p5.jpg")
     
 }
 #item11{
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("https://files.slack.com/files-pri/TC0UF4B08-FFPQ28GFM/p1.jpg")
+    background-image: url("p6.jpg")
 }
 #item12{
-    background-image: url("https://files.slack.com/files-pri/TC0UF4B08-FFQUZMGUX/p7.jpg");
+    background-image: url("p7.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 #item13{
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("https://files.slack.com/files-pri/TC0UF4B08-FFP9E4SKB/p3.jpg")
+    background-image: url("p8.jpg")
 }
 #five{
     width: 70%;
@@ -273,22 +276,22 @@ h6:hover{
     
 }
 #item20{
-    background-image: url("https://files.slack.com/files-pri/TC0UF4B08-FFPQ28GFM/p1.jpg");
+    background-image: url("p3.jpg");
     background-size: cover;
     background-repeat: no-repeat
 }
 #item21{
-    background-image: url("https://files.slack.com/files-pri/TC0UF4B08-FFP9E58N5/p4.jpg");
+    background-image: url("p1.jpg");
     background-size: cover;
     background-repeat: no-repeat
 }
 #item22{
-    background-image: url("https://files.slack.com/files-pri/TC0UF4B08-FFP9E5Q8Z/p5.jpg");
+    background-image: url("p2.jpg");
     background-size: cover;
     background-repeat: no-repeat
 }
 #item23{
-    background-image: url("https://files.slack.com/files-pri/TC0UF4B08-FFP9E69BK/p6.jpg");
+    background-image: url("p4.jpg");
     background-size: cover;
     background-repeat: no-repeat
 }
@@ -357,23 +360,17 @@ p:hover{
     align-content: stretch;
     
 }
+
 #item1,#item2,#item3,#item0{
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     margin-top: 6%
 
 }
-#four>div{
-    width: 80px;
-    height: 80px;
-}
-#five>div{
-    width: 80px;
-    height: 80px;
+
 }
 @media only screen and (width: 600px){
     #mediamenu{
         display: none
     }
-}
 }
