@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+    html, body{
+        width: 100%;
+        margin: 0;
+        height: 100%;
+        
+    }
+    p{
+        display: inline-block
+    }
+    #input{
+        padding: 11px;
+        width: 30%;
+        margin-top: 1%;
+        outline: none;
+        border:none
+        
+    }
+    table, tr, td {
+    border: 2px solid white;
+    border-collapse: collapse;
+}
+.fa-check-square{
+    margin-left: 10px;
+    color: green;
+    cursor: pointer;
+}
+p{
+    padding-left: 10px;
+    margin: 0;
+    color: green;
+}
+
+    
+
+table{
+    width: 100%;
+}
+.fa-trash-alt{
+    float: right;
+    cursor: pointer;
+    color: white
+    
+}
+td{
+    
+    padding: 2%
+}
+#but2{
+    
+}
+button{
+    padding: 11px;
+    margin-top: 1%;
+    border: none;
+    background:  linear-gradient(to right, #a1abe9 0%, #71ead7 100%);
+    outline: none
+}
+h1{
+    text-align: center;
+    color: white
+}
+#wrapper{
+    width: 70%;
+    height: 100%;
+    margin: 0 auto
+    
+}
+body{
+    background-image: url("https://www.getwise.org/Images/Grass_Sky_Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+
+    
+    
+    </style>
+</head>
+<body>
+    
+    <div id="wrapper">
+        <h1>My ToDo List</h1>
+        
+        <table>
+         
+        </table>
+        <input id="input" type="text" onfocus="this.value=''" placeholder="add new todo item...">
+        <button id="but1" class="button" type="button" onclick="addList()">Add</button>
+        <button id="but2" class="button" type="button" onclick="showAll()">Show All</button>
+        <button id="but3" class="button" type="button" onclick="showActive()">Show Active</button>
+        <button id="but4" class="button" type="button" onclick="showComp()">Show Completed</button>
+    </div>
+    <script>
+            let tr = document.createElement("tr");
+            let td = document.createElement("td");
+            let p = document.createElement("p");
+            let table = document.getElementsByTagName("table")[0];
+            let iconBox = document.createElement("i");
+            let iconTrash = document.createElement("i");
+            iconBox.className = "far fa-check-square";
+            iconTrash.className = "fas fa-trash-alt";
+            let input = document.getElementById("input");
+    
+        function addList(){
+            let tr = document.createElement("tr");
+            let td = document.createElement("td");
+            let p = document.createElement("p");
+            p.style.color ="green";
+            let table = document.getElementsByTagName("table")[0];
+            let iconBox = document.createElement("i");
+            iconBox.style.color = "green";
+            let iconTrash = document.createElement("i");
+            iconBox.className = "far fa-check-square";
+            iconTrash.className = "fas fa-trash-alt";
+            let input = document.getElementById("input");
+            p.innerText = input.value;
+            let create = table.insertBefore(tr, table.childNodes[0]).appendChild(td);
+            create.appendChild(iconBox);
+            create.appendChild(p);
+            create.appendChild(iconTrash);
+            
+            document.getElementsByClassName("far fa-check-square")[0].addEventListener("click",red)
+                function red(){
+                    
+                    if(this.style.color === "green"){
+                        this.style.color = "red";
+                        this.parentElement.getElementsByTagName("p")[0].style.color = "red";
+                        this.parentElement.getElementsByTagName("p")[0].style.textDecoration = "line-through";
+                } else {
+                    this.style.color = "green";
+                    this.parentElement.getElementsByTagName("p")[0].style.textDecoration = "none";
+                    this.parentElement.getElementsByTagName("p")[0].style.color = "green";
+                    
+                }
+           
+                }
+           
+                document.getElementsByClassName("fas fa-trash-alt")[0].addEventListener("click",remove);
+                    function remove(){
+                        this.parentElement.parentElement.remove()
+                    }
+    
+                    document.getElementById("input").value = ""
+    
+                    
+             
+    
+    }
+    
+    let para = document.getElementsByTagName('p');
+    
+    function showActive(){
+
+        
+        for(let j = 0; j < para.length; j++){
+            para[j].parentElement.parentElement.style.display = "table-row"
+            console.log("asd")
+        }
+        
+        
+        
+        
+        for(let i = 0; i < para.length; i++){
+            
+                if(para[i].style.color === "red"){
+                para[i].parentElement.parentElement.style.display = "none";
+                }
+        }
+
+        }   
+
+    function showComp(){
+       
+        
+        for(let j = 0; j < para.length; j++){
+            para[j].parentElement.parentElement.style.display = "table-row"
+            
+        }
+        
+        
+        
+        
+        for(let i = 0; i < para.length; i++){
+              
+                if(para[i].style.color === "green"){
+                para[i].parentElement.parentElement.style.display = "none";
+                }
+        }
+
+        }   
+
+    function showAll(){
+        for(let j = 0; j < para.length; j++){
+            para[j].parentElement.parentElement.style.display = "table-row"
+            
+        }
+
+    }      
+
+              
+    
+    
+    </script>
+</body>
+</html>
