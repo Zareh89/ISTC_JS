@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../LessonsWEB/style/jQuery.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
+ 
+</head>
+<body>
+  <div class="wrapper">
+      <div class="menu">
+      
+            <div class="logo">
+
+                </div>
+        
+          <div class="home">  
+                
+            <span>HOME</span>
+            <span>ABOUT US</span>
+            <span>PAGES</span>
+            <span>BLOG</span>
+            <span>GALLERY</span>
+            <span>CONTACTS</span>
+            <i class="far fa-user"></i>  
+        </div>
+        
+      </div>
+      <div id="slideshow">
+            <div class="slide1">
+              
+            </div>
+            <div class="slide2"> 
+              
+            </div>
+         </div>
+
+  </div>
+   <script>
+       $(document).ready(function() {
+	
+    $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+$('#slideshow > div:first')
+.fadeOut(1500)
+.next()
+.fadeIn(1500)
+.end()
+.appendTo('#slideshow');
+},  4000);
+});
+   
+   
+   </script>
+</body>
+</html>
