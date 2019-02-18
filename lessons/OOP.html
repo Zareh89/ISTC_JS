@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+div{
+    width: 60px;
+    height: 60px;
+    
+    
+}
+
+
+</style>
+
+<body>
+    
+    Tag<input id="one" type="text">
+    Text<input id="two" type="text">
+    Color<input id="three" type="text">
+    bColor<input id="four" type="text">
+    <button type="button" onclick="sxmel()">BAREV DZEZ, es Vermisheln em</button>
+    
+    
+    <script>
+        
+        
+     function sxmel(){
+         let tag = document.getElementById("one").value;
+         let text = document.getElementById("two").value;
+         let color = document.getElementById("three").value;
+         let backColor = document.getElementById("four").value;
+
+            function cnonst(tag,text,color,backColor){
+                this.div = document.createElement(tag);
+                this.text = this.div.innerText = text;
+                this.color = this.div.style.color = color;
+                this.backColor = this.div.style.backgroundColor = backColor;
+                this.kcel = function(){
+                    document.body.appendChild(this.div)
+                }
+                this.kcel()
+            }
+            let Himmarutyun = new cnonst(tag,text,color,backColor)
+     }
+         
+      
+
+
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    </script>
+
+
+</body>
+</html>
